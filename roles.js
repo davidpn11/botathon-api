@@ -12,7 +12,7 @@ const defaultData = {
       local: "Ponto do Espetinho",
       descricao: "Aquele espetinho e long neck de toda quinta",
       n_participantes: 3,
-      participantes: "David, Luiz, Tati",
+      participantes: "David\n Luiz\n Tati",
       imagemURL: config.origin + "/espeto.jpg"
     },
 
@@ -23,7 +23,7 @@ const defaultData = {
       local: "Major Lock",
       descricao: "Rolê pra dançar até o chao",
       n_participantes: 7,
-      participantes: "Luis, David, Tati, Camila, Alexandre, Ademilson, Balbo",
+      participantes: "Luis\n David\n Tati\n Camila\n Alexandre\n Ademilson\n Balbo",
       imagemURL: config.origin + "/balada.jpg"
     },
 
@@ -47,7 +47,7 @@ const defaultData = {
       descricao: "Carnaval sempre eh bom, entao resolvemos adiantar",
       n_participantes: 8,
       participantes:
-        "Alexandre, Andre, Leticia, Rafa, David, Luis, Tati, Assis",
+        "Alexandre\n Andre\n Leticia\n Rafa\n David\n Luis\n Tati\n Assis",
       imagemURL: config.origin + "/carnaval.jpg"
     },
 
@@ -60,7 +60,7 @@ const defaultData = {
         "Eh churrasco mas todos sabemos que o pao de alho eh sempre a estrela do role",
       n_participantes: 11,
       participantes:
-        "Alexandre, Andre, Luis, David, Tati, Mundim, Tulio, Marina, Camila, Pati, Velozo",
+        "Alexandre\n Andre\n Luis\n David\n Tati\n Mundim\n Tulio\n Marina\n Camila\n Pati\n Velozo",
       imagemURL: config.origin + "churrasco.jpg"
     }
   ]
