@@ -61,7 +61,7 @@ const defaultData = {
 };
 
 const get = () => {
-  return defaultData.roles;
+  return carrouselGenerator();
 };
 
 const add = (id, nome) => {
@@ -75,6 +75,65 @@ const add = (id, nome) => {
   }
 
   return false;
+};
+
+const carrouselGenerator = () => {
+  let content = {
+    itemType: "application/vnd.lime.document-select+json",
+    items: []
+  };
+  defaultData.roles.forEach(el => {
+    let item = {
+      header: {
+        type: "application/vnd.lime.media-link+json",
+        value: {
+          title: el.nome,
+          text: `${el.data}<br>${el.local}<br>`,
+          type: "image/jpeg",
+          uri:
+            "http://www.isharearena.com/wp-content/uploads/2012/12/wallpaper-281049.jpg"
+        }
+      },
+      options: [
+        {
+          label: {
+            type: "text/plain",
+            value: "Mais informacões"
+          },
+          value: {
+            type: "text/plain",
+            value: "Mais informacões"
+          }
+        },
+        {
+          label: {
+            type: "text/plain",
+            value: "Participantes"
+          },
+          value: {
+            type: "application/json",
+            value: {
+              id: el.id
+            }
+          }
+        },
+        {
+          label: {
+            type: "text/plain",
+            value: "Quero ir!"
+          },
+          value: {
+            type: "application/json",
+            value: {
+              id: el.id
+            }
+          }
+        }
+      ]
+    };
+    content.items.push(item);
+  });
+  return content;
 };
 
 /*const add = (token, contact) => {
