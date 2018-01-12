@@ -115,6 +115,7 @@ const carrouselGenerator = () => {
             type: "application/json",
             value: {
               type: "getInfo",
+              id: el.id,
               info: el.descricao
             }
           }
