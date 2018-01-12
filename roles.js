@@ -124,6 +124,7 @@ const carrouselGenerator = () => {
           value: {
             type: "application/json",
             value: {
+              type: "getParticipantes",
               id: el.id
             }
           }
@@ -136,6 +137,7 @@ const carrouselGenerator = () => {
           value: {
             type: "application/json",
             value: {
+              type: "registrarParticipante",
               id: el.id
             }
           }
