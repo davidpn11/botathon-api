@@ -72,10 +72,10 @@ const get = () => {
 
 const add = (id, nome) => {
   if (id && nome) {
-    let currentIndex = defaultData.roles.findIndex(e => e.id === id);
+    let currentIndex = defaultData.roles.findIndex(e => e.id == id);
     let current = defaultData.roles[currentIndex];
     current.n_participantes = current.n_participantes + 1;
-    current.participantes = current.participantes.concat(", " + nome);
+    current.participantes = current.participantes.concat("\n" + nome);
     defaultData.roles[currentIndex] = current;
     return current;
   }
