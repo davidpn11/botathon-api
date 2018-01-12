@@ -128,7 +128,9 @@ const carrouselGenerator = () => {
             value: {
               type: "getInfo",
               id: el.id,
-              info: el.descricao
+              info: el.descricao,
+              lat: el.coordenadas.latidude,
+              long: el.coordenadas.longitude
             }
           }
         },
@@ -141,7 +143,9 @@ const carrouselGenerator = () => {
             type: "application/json",
             value: {
               type: "getParticipantes",
-              id: el.id
+              id: el.id,
+              lat: el.coordenadas.latidude,
+              long: el.coordenadas.longitude
             }
           }
         },
@@ -154,7 +158,9 @@ const carrouselGenerator = () => {
             type: "application/json",
             value: {
               type: "registrarParticipante",
-              id: el.id
+              id: el.id,
+              lat: el.coordenadas.latidude,
+              long: el.coordenadas.longitude
             }
           }
         }
