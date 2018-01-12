@@ -13,7 +13,8 @@ const defaultData = {
       descricao: "Aquele espetinho e long neck de toda quinta",
       n_participantes: 3,
       participantes: "David\n Luiz\n Tati",
-      imagemURL: config.origin + "/espeto.jpg"
+      imagemURL: config.origin + "/espeto.jpg",
+      coordenadas: { latidude: -19.921012, longitude: -43.960112 }
     },
 
     {
@@ -25,7 +26,8 @@ const defaultData = {
       n_participantes: 7,
       participantes:
         "Luis\n David\n Tati\n Camila\n Alexandre\n Ademilson\n Balbo",
-      imagemURL: config.origin + "/balada.jpg"
+      imagemURL: config.origin + "/balada.jpg",
+      coordenadas: { latidude: -19.921012, longitude: -43.960112 }
     },
 
     {
@@ -37,7 +39,8 @@ const defaultData = {
         "Role pros rockeiros de plantao escutar musica boa e mandar muito headbang",
       n_participantes: 4,
       participantes: "Tati, Mundim, Tulio, Assis",
-      imagemURL: config.origin + "/rock.jpg"
+      imagemURL: config.origin + "/rock.jpg",
+      coordenadas: { latidude: -19.921012, longitude: -43.960112 }
     },
 
     {
@@ -49,7 +52,8 @@ const defaultData = {
       n_participantes: 8,
       participantes:
         "Alexandre\n Andre\n Leticia\n Rafa\n David\n Luis\n Tati\n Assis",
-      imagemURL: config.origin + "/carnaval.jpg"
+      imagemURL: config.origin + "/carnaval.jpg",
+      coordenadas: { latidude: -19.921012, longitude: -43.960112 }
     },
 
     {
@@ -62,7 +66,8 @@ const defaultData = {
       n_participantes: 11,
       participantes:
         "Alexandre\n Andre\n Luis\n David\n Tati\n Mundim\n Tulio\n Marina\n Camila\n Pati\n Velozo",
-      imagemURL: config.origin + "/churrasco.jpg"
+      imagemURL: config.origin + "/churrasco.jpg",
+      coordenadas: { latidude: -19.921012, longitude: -43.960112 }
     }
   ]
 };
