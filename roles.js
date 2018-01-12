@@ -6,7 +6,7 @@ const db = {};
 const defaultData = {
   roles: [
     {
-      id: "1",
+      id: 1,
       nome: "Ponto de quinta",
       data: "10/01/18 18:00",
       local: "Ponto do Espetinho",
@@ -17,7 +17,7 @@ const defaultData = {
     },
 
     {
-      id: "2",
+      id: 2,
       nome: "Baladinha Top",
       data: "13/01/2018 22:00",
       local: "Major Lock",
@@ -28,7 +28,7 @@ const defaultData = {
     },
 
     {
-      id: "3",
+      id: 3,
       nome: "Rock Cabuloso",
       data: "12/01/2018 22:00",
       local: "Amsterdam Pubbh",
@@ -40,7 +40,7 @@ const defaultData = {
     },
 
     {
-      id: "4",
+      id: 4,
       nome: "Pre pre Carnaval",
       data: "20/01/2018 16:00",
       local: "Santa Tereza",
@@ -52,7 +52,7 @@ const defaultData = {
     },
 
     {
-      id: "5",
+      id: 5,
       nome: "Take.Churasco",
       data: "28/01/2018 14:00",
       local: "Pilotis",
