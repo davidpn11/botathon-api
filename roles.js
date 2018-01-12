@@ -23,7 +23,8 @@ const defaultData = {
       local: "Major Lock",
       descricao: "Rolê pra dançar até o chao",
       n_participantes: 7,
-      participantes: "Luis\n David\n Tati\n Camila\n Alexandre\n Ademilson\n Balbo",
+      participantes:
+        "Luis\n David\n Tati\n Camila\n Alexandre\n Ademilson\n Balbo",
       imagemURL: config.origin + "/balada.jpg"
     },
 
@@ -73,22 +74,27 @@ const get = () => {
 const add = (id, nome) => {
   if (id && nome) {
     let currentIndex = defaultData.roles.findIndex(e => e.id == id);
-    // let current = defaultData.roles[currentIndex];
-    // current.n_participantes = current.n_participantes + 1;
-    // current.participantes = current.participantes.concat("\n" + nome);
-    defaultData.roles[currentIndex].n_participantes = defaultData.roles[currentIndex].n_participantes + 1;
-    defaultData.roles[currentIndex].participantes = defaultData.roles[currentIndex].participantes.concat("\n" + nome);
-    return defaultData.roles[currentIndex];
+    if (defaultData.roles[currentIndex].participantes.indexOf(nome) === -1) {
+      defaultData.roles[currentIndex].n_participantes =
+        defaultData.roles[currentIndex].n_participantes + 1;
+      defaultData.roles[currentIndex].participantes = defaultData.roles[
+        currentIndex
+      ].participantes.concat("\n" + nome);
+      return defaultData.roles[currentIndex];
+    } else {
+      return {};
+    }
   }
-
-  return false;
 };
 
-const getParticipants = (id) => {
-  let resp = {}
-  let event = defaultData.roles.find((el) => el.id == id);
-  return { n_participants: `${event.n_participantes}`, participants: `${event.participantes}` }
-}
+const getParticipants = id => {
+  let resp = {};
+  let event = defaultData.roles.find(el => el.id == id);
+  return {
+    n_participants: `${event.n_participantes}`,
+    participants: `${event.participantes}`
+  };
+};
 
 const carrouselGenerator = () => {
   let content = {
@@ -153,18 +159,6 @@ const carrouselGenerator = () => {
   });
   return content;
 };
-
-/*const add = (token, contact) => {
-  if (!contact.id) {
-    contact.id = Math.random()
-      .toString(36)
-      .substr(-8);
-  }
-
-  get(token).contacts.push(contact);
-
-  return contact;
-}; */
 
 module.exports = {
   get,
