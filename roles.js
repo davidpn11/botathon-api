@@ -12,7 +12,8 @@ const defaultData = {
       local: "Ponto do Espetinho",
       descricao: "Aquele espetinho e long neck de toda quinta",
       n_participantes: 3,
-      participantes: "David, Luiz, Tati"
+      participantes: "David, Luiz, Tati",
+      imagemURL: config.origin + "/espeto.jpg"
     },
 
     {
@@ -22,7 +23,8 @@ const defaultData = {
       local: "Major Lock",
       descricao: "Rolê pra dançar até o chao",
       n_participantes: 7,
-      participantes: "Luis, David, Tati, Camila, Alexandre, Ademilson, Balbo"
+      participantes: "Luis, David, Tati, Camila, Alexandre, Ademilson, Balbo",
+      imagemURL: config.origin + "/balada.jpg"
     },
 
     {
@@ -33,7 +35,8 @@ const defaultData = {
       descricao:
         "Role pros rockeiros de plantao escutar musica boa e mandar muito headbang",
       n_participantes: 4,
-      participantes: "Tati, Mundim, Tulio, Assis"
+      participantes: "Tati, Mundim, Tulio, Assis",
+      imagemURL: config.origin + "/rock.jpg"
     },
 
     {
@@ -43,7 +46,9 @@ const defaultData = {
       local: "Santa Tereza",
       descricao: "Carnaval sempre eh bom, entao resolvemos adiantar",
       n_participantes: 8,
-      participantes: "Alexandre, Andre, Leticia, Rafa, David, Luis, Tati, Assis"
+      participantes:
+        "Alexandre, Andre, Leticia, Rafa, David, Luis, Tati, Assis",
+      imagemURL: config.origin + "/carnaval.jpg"
     },
 
     {
@@ -55,7 +60,8 @@ const defaultData = {
         "Eh churrasco mas todos sabemos que o pao de alho eh sempre a estrela do role",
       n_participantes: 11,
       participantes:
-        "Alexandre, Andre, Luis, David, Tati, Mundim, Tulio, Marina, Camila, Pati, Velozo"
+        "Alexandre, Andre, Luis, David, Tati, Mundim, Tulio, Marina, Camila, Pati, Velozo",
+      imagemURL: config.origin + "churrasco.jpg"
     }
   ]
 };
@@ -88,10 +94,9 @@ const carrouselGenerator = () => {
         type: "application/vnd.lime.media-link+json",
         value: {
           title: el.nome,
-          text: `${el.data}<br>${el.local}<br>`,
+          text: `${el.data} \n ${el.local}`,
           type: "image/jpeg",
-          uri:
-            "http://www.isharearena.com/wp-content/uploads/2012/12/wallpaper-281049.jpg"
+          uri: el.imagemURL
         }
       },
       options: [
