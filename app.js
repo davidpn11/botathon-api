@@ -32,6 +32,12 @@ app.post("/roles/:id", bodyParser.json(), (req, res) => {
   res.send(roles.add(id, nome));
 });
 
+app.get("/roles/:id/participants", (req, res) => {
+  let { id } = req.params;
+  console.log(roles.getParticipants(id))
+  res.send(roles.getParticipants(id));
+});
+
 app.listen(config.port, () => {
   console.log("Server listening on port %s, Ctrl+C to stop", config.port);
 });
