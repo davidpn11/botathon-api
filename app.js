@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
     <pre>
      Botathon API  
       GET /roles      
+      POST /roles/:id { nome }      
     </pre>
     `;
   res.send(help);
@@ -22,6 +23,13 @@ app.get("/", (req, res) => {
 
 app.get("/roles", (req, res) => {
   res.send(roles.get());
+});
+
+app.post("/roles/:id", bodyParser.json(), (req, res) => {
+  let { id } = req.params;
+  let { nome } = req.body;
+
+  res.send(roles.add(id, nome));
 });
 
 app.listen(config.port, () => {
