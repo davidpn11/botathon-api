@@ -113,7 +113,10 @@ const carrouselGenerator = () => {
           },
           value: {
             type: "text/plain",
-            value: el.descricao
+            value: {
+              type: "getInfo",
+              info: el.descricao
+            }
           }
         },
         {
