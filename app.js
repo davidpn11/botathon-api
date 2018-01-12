@@ -38,6 +38,11 @@ app.get("/roles/:id/participants", (req, res) => {
   res.send(roles.getParticipants(id));
 });
 
+app.put("/roles/create/", bodyParser.json(), (req, res) => {
+  let { event } = req.body;
+  res.send(roles.addRole(event));
+});
+
 app.listen(config.port, () => {
   console.log("Server listening on port %s, Ctrl+C to stop", config.port);
 });

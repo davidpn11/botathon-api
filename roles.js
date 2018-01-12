@@ -90,6 +90,15 @@ const getParticipants = (id) => {
   return { n_participants: `${event.n_participantes}`, participants: `${event.participantes}` }
 }
 
+const addRole = (role) => {
+  if (role) {
+    defaultData.roles.push(role);
+    return true;
+  }
+
+  return false;
+};
+
 const carrouselGenerator = () => {
   let content = {
     itemType: "application/vnd.lime.document-select+json",
@@ -169,5 +178,6 @@ const carrouselGenerator = () => {
 module.exports = {
   get,
   add,
-  getParticipants
+  getParticipants,
+  addRole
 };
