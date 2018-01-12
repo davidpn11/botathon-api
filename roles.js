@@ -61,7 +61,7 @@ const defaultData = {
       n_participantes: 11,
       participantes:
         "Alexandre\n Andre\n Luis\n David\n Tati\n Mundim\n Tulio\n Marina\n Camila\n Pati\n Velozo",
-      imagemURL: config.origin + "churrasco.jpg"
+      imagemURL: config.origin + "/churrasco.jpg"
     }
   ]
 };
